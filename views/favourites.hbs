@@ -1,0 +1,25 @@
+<section id="collection">
+    <article id="collection-container">
+
+        {{#if likedTokens}}
+            {{#each likedTokens}}
+                <article class="card-box">
+                    <article class="card-box-img">
+                        <img src="{{this.imgUrl}}" alt="{{this.title}}">
+                    </article>
+                    <article class="card-box-text">
+                        <h2>Title: {{this.title}}</h2>
+                        <h3>Likes: {{this.usersLiked.length}}</h3>
+                        <button class="details-btn"><a href="/details/{{this._id}}">Details</a></button>
+                    </article>
+                </article>
+            {{/each}}
+        {{else}}
+            <div id="empty-collection">
+                <h1>You still have not liked any tokens.</h1> <h2>Check out our tokens and maybe you will <button><a href="/collection">Like</a></button> some of them.</h2>
+            </div>
+        {{/if}}
+
+
+    </article>
+</section>

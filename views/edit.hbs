@@ -1,0 +1,26 @@
+<section id="form-container">
+
+    <div id="form-box">
+
+        <form action="/details/edit/{{cryptoToken._id}}" method="POST" class="container-text">
+            <h2>Create</h2>
+
+            <label for="title" class="label">Title:</label>
+            <input type="text" id="title" class="input-text" name="title" value="{{cryptoToken.title}}">
+
+            <label for="description" class="label">Description:</label>
+            <input type="text" id="description" class="input-text" name="description" value="{{cryptoToken.description}}">
+
+            <label for="imgUrl" class="label">Image url:</label>
+            <input type="text" id="imgUrl" class="input-text" name="imgUrl" value="{{cryptoToken.imgUrl}}">
+
+            <label for="founder" class="label">Founder:</label>
+            <input type="text" id="founder" class="input-text" name="founder" value="{{cryptoToken.founder}}">
+
+            <button class="form-btn">Edit</button>
+
+        </form>
+
+    </div>
+
+</section>

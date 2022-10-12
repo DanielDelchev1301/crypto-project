@@ -1,0 +1,35 @@
+<section id="details">
+
+    <article id="details-container">
+
+        <article id="details-card-box">
+            <article id="details-card-box-img">
+                <img src="{{cryptoToken.imgUrl}}" alt="details-img">
+            </article>
+            <article id="details-card-box-text">
+                <h2>Title: {{cryptoToken.title}}</h2>
+                <p>{{cryptoToken.description}}</p>
+                <h4>Founder: {{cryptoToken.founder}}</h4>
+                <h5>Likes: {{cryptoToken.usersLiked.length}}</h5>
+
+                {{#if user}}
+                    {{#if isAuthor}}
+                        <button id="details-button-edit"><a href="/details/edit/{{cryptoToken._id}}">Edit</a></button>
+                        <button id="details-button-delete"><a href="/details/delete/{{cryptoToken._id}}">Delete</a></button>
+                    {{else}}
+                        {{#if isAlreadyLiked}}
+                            <button id="details-button-unlike"><a href="/details/unlike/{{cryptoToken._id}}">Unlike</a></button>
+                        {{else}}
+                            <button id="details-button-like"><a href="/details/like/{{cryptoToken._id}}">Like</a></button>
+                        {{/if}}
+                    {{/if}}
+                {{else}}
+                {{/if}}
+
+
+            </article>
+        </article>
+
+    </article>
+
+</section>

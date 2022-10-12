@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/img/crypto-logo.png">
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
+        <title>Crypto</title>
+    </head>
+
+    <body>
+         
+        <header id="nav-content">
+
+                <nav id="nav-box">
+
+                    <a id="home-btn" href="/">Home</a>
+
+                    <ul>
+                        <li><a href="/collection">Collection</a></li>
+
+                        {{#if user}}
+                            <li><a href="/favourites">My Favourites</a></li>
+                            <li><a href="/create">Create Token</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        {{else}}
+                            <li><a href="/register">Register</a></li>
+                            <li><a href="/login">Login</a></li>
+                        {{/if}}
+                    </ul>
+
+                </nav>
+
+            </header>
+
+            {{#if error}}
+                <p id="error-msg">{{error}}</p>
+            {{/if}}
+
+            <main>
+
+                {{{body}}}
+
+            </main>
+
+            <footer>
+                © Crypto by Daniel Delchev
+            </footer>
+
+        </div>
+
+
+    </body>
+
+</html>

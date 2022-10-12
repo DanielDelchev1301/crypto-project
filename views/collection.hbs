@@ -1,0 +1,25 @@
+<section id="collection">
+    <article id="collection-container">
+
+        {{#if allTokens}}
+            {{#each allTokens}}
+                <article class="card-box">
+                    <article class="card-box-img">
+                        <img src="{{this.imgUrl}}" alt="{{this.title}}">
+                    </article>
+                    <article class="card-box-text">
+                        <h2>Title: {{this.title}}</h2>
+                        <h3>Likes: {{this.usersLiked.length}}</h3>
+                        <button class="details-btn"><a href="/details/{{this._id}}">Details</a></button>
+                    </article>
+                </article>
+            {{/each}}
+        {{else}}
+            <div id="empty-collection">
+                <h1>Collection is empty.</h1> <h2>If you want you can <button><a href="/create">Create</a></button> a token.</h2>
+            </div>
+        {{/if}}
+
+
+    </article>
+</section>

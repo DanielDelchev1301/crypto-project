@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-color: rgb(213, 213, 213);
+    background-size: cover;
+}
+
+#main-content {
+    height: 100%;
+    position: relative;
+}
+
+#nav-content {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);  
+    opacity: 0.7; 
+}
+
+#nav-content:hover {
+    opacity: 0.8;
+}
+
+#nav-box ul {
+    display: inline-flex;
+    margin-left: 500px;
+}
+
+#nav-box ul li{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#home-btn {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nav-box ul li a,
+#home-btn {
+    text-decoration: none;
+    color: #eac7c3;
+    animation-name: navButtons;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+#nav-box ul li a:hover,
+#home-btn:hover {
+    animation-name: navBtnShake;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    color: #ebb1ab;
+}
+
+@keyframes navButtons {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes navBtnShake {
+    0% { font-size: 20px; }
+    50% { font-size: 19px; }
+    100% { font-size: 20px; }
+}
+
+#home-section {
+    margin-top: 200px;
+}
+
+#home-section h1 {
+    margin-left: 100px;
+    font-size: 50px;
+    animation-name: header1PopUp;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+
+@keyframes header1PopUp {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#home-section h2 {
+    margin-left: 450px;
+    font-size: 40px;
+    animation-name: header2PopUp;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+@keyframes header2PopUp {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+    color: #eac7c3;
+}
+
+footer:hover {
+    opacity: 0.8;
+    color: #ebb1ab;
+}
+
+#error-msg {
+    font-size: 20px;
+    width: 50%;
+    margin-left: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: rgb(255, 57, 57);
+    opacity: 0.5;
+    animation-name: error-msg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes error-msg {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
